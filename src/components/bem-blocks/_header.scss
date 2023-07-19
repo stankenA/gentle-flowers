@@ -1,1 +1,134 @@
-.header {}
+.header {
+  background-color: #fff;
+  padding-top: 8px;
+  padding-bottom: 30px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    width: var(--content-width);
+    margin: 0 auto 8px;
+  }
+
+  &__link {
+    @include reset-link;
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__logo {
+    width: 59px;
+    height: 59px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__address-list {
+    @include reset-list;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    height: 34px;
+    margin-left: 39px;
+  }
+
+  &__address {
+    color: #2E2E2E;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__line {
+    display: block;
+    height: 100%;
+    width: 1px;
+    border-left: 1px solid #2E2E2E;
+  }
+
+  &__info {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-left: auto;
+  }
+
+  &__phone {
+    @include reset-link;
+    color: #2E2E2E;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  &__call {
+    width: 193px;
+    height: 30px;
+  }
+
+  &__contacts {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  &__bottom {
+    width: 100%;
+    border-top: 1px solid #AFAFAF;
+    padding-top: 25px;
+  }
+
+  &__bottom-content {
+    width: var(--content-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+  }
+
+  &__nav-list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__nav-item {
+    &_catalog {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../img/arrow.svg) no-repeat center / contain;
+        @include transition;
+      }
+    }
+  }
+
+  &__interact-list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
