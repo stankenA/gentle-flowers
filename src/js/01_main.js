@@ -39,3 +39,13 @@ const promoSwiper = new Swiper('.promo__swiper', {
     clickable: true,
   },
 });
+
+const serviceSwiper = new Swiper('.service__swiper', {
+  slidesPreView: 1,
+  spaceBetween: 20,
+  grabCursor: true,
+  pagination: {
+    el: ".service__swiper-pagination",
+    clickable: true,
+  },
+});
