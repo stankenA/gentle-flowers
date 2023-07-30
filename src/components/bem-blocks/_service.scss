@@ -21,11 +21,19 @@
     border: 1px solid #000;
     overflow: hidden;
     display: flex;
+
+    @media screen and (max-width: 1439px) {
+      height: 437px;
+    }
   }
 
   &__img {
     height: 100%;
     width: 775px;
+
+    @media screen and (max-width: 1439px) {
+      width: 582px;
+    }
   }
 
   &__swiper {
@@ -46,6 +54,12 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (max-width: 1439px) {
+      padding-top: 20px;
+      padding-left: 28px;
+      gap: 25px;
+    }
   }
 
   &__swiper-title {
@@ -68,6 +82,10 @@
     box-sizing: border-box;
     padding-left: 15px;
     margin-left: 10px;
+
+    @media screen and (max-width: 1439px) {
+      gap: 8px;
+    }
   }
 
   &__swiper-item {
@@ -87,6 +105,10 @@
     right: 50% !important;
     width: unset !important;
     transform: translateX(50%) !important;
+
+    @media screen and (max-width: 1439px) {
+      bottom: 20px !important;
+    }
 
     .swiper-pagination-bullet {
       opacity: 1;

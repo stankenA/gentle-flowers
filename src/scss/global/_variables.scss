@@ -1,6 +1,10 @@
 :root {
   --content-width: 1280px;
 
+  @media screen and (max-width: 1439px) {
+    --content-width: 980px;
+  }
+
   @media screen and (max-width: 767px) {
     --content-width: 90%;
   }

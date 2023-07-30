@@ -1,0 +1,100 @@
+.feedback {
+  margin-bottom: 60px;
+
+  &__wrapper {
+    width: var(--content-width);
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+
+  &__service-list {
+    @include reset-list;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: #E6E6E6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    position: relative;
+    gap: 20px;
+  }
+
+  &__service-item {
+    @include transition;
+
+    &:hover {
+      background-color: #c5c5c5;
+      border-radius: 5px;
+    }
+  }
+
+  &__service-btn {
+    @include reset-btn;
+    color: #6B6B6B;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    height: 100%;
+    width: 45px;
+    @include transition;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bg {
+    display: block;
+    width: 60px;
+    height: 44px;
+    border-radius: 10px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include transition;
+
+    &_all {
+      left: 16%;
+    }
+
+    &_yandex {
+      left: 50%;
+    }
+
+    &_google {
+      left: 84%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  &__nav-btn {
+    @include reset-btn;
+    background: url(../img/arrow-nav.svg) no-repeat center / contain;
+    width: 57px;
+    height: 18px;
+
+    &_prev {
+      transform: rotate(180deg);
+      opacity: .3;
+    }
+  }
+}

@@ -8,6 +8,10 @@
     padding-bottom: 56px;
     border-bottom: 1px solid #000;
     height: 758px;
+
+    @media screen and (max-width: 1439px) {
+      height: 680px;
+    }
   }
 
   &__title {
@@ -16,6 +20,10 @@
     font-weight: 700;
     line-height: 150%;
     margin: 0 0 89px;
+
+    @media screen and (max-width: 1439px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -25,6 +33,10 @@
     flex-direction: column;
     gap: 70px;
     margin-left: 232px;
+
+    @media screen and (max-width: 1439px) {
+      margin-left: 90px;
+    }
   }
 
   &__item {
@@ -52,5 +64,9 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media screen and (max-width: 1439px) {
+      width: 326px;
+    }
   }
 }

@@ -17,6 +17,10 @@
     margin-bottom: 30px;
     box-sizing: border-box;
     position: relative;
+
+    @media screen and (max-width: 1439px) {
+      height: 493px;
+    }
   }
 
   &__swiper-wrapper {
@@ -39,6 +43,10 @@
     z-index: 2;
     top: 62px;
     left: 72px;
+
+    @media screen and (max-width: 1439px) {
+      left: 54px;
+    }
   }
 
   &__swiper-slide {
@@ -48,6 +56,11 @@
     height: 100%;
     box-sizing: border-box;
     position: relative;
+
+    @media screen and (max-width: 1439px) {
+      padding-top: 156px;
+      padding-left: 54px;
+    }
   }
 
   &__swiper-title {
@@ -56,6 +69,10 @@
     font-weight: 700;
     line-height: 100%;
     margin: 0;
+
+    @media screen and (max-width: 1439px) {
+      font-size: 68px;
+    }
   }
 
   &__swiper-txt {
@@ -64,13 +81,19 @@
     font-weight: 500;
     line-height: 100%;
     margin: 13px 0 86px;
+
+    @media screen and (max-width: 1439px) {
+      font-size: 32px;
+      margin-bottom: 81px;
+    }
   }
 
   &__swiper-img {
     display: block;
     position: absolute;
-    right: -35px;
-    bottom: -47px;
+    right: 0;
+    bottom: 0;
+    height: 100%;
   }
 
   &__swiper-pagination {
@@ -108,6 +131,10 @@
       'fifth sixth sixth';
     gap: 20px;
     justify-items: center;
+
+    @media screen and (max-width: 1439px) {
+      grid-auto-rows: 435px;
+    }
   }
 
   &__card {
@@ -170,30 +197,54 @@
     object-fit: contain;
 
     &_1 {
-      width: 300px;
       height: 300px;
+
+      @media screen and (max-width: 1439px) {
+        height: 230px;
+      }
     }
 
     &_2 {
       position: absolute;
       top: 53px;
       right: 0;
+
+      @media screen and (max-width: 1439px) {
+        width: 446px;
+        top: 55px;
+      }
     }
 
     &_3 {
       position: absolute;
       top: 30px;
       left: 18px;
+
+      @media screen and (max-width: 1439px) {
+        width: 454px;
+      }
     }
 
-    &_4 {}
+    &_4 {
+      @media screen and (max-width: 1439px) {
+        height: 234px;
+      }
+    }
 
-    &_5 {}
+    &_5 {
+      @media screen and (max-width: 1439px) {
+        height: 234px;
+      }
+    }
 
     &_6 {
       position: absolute;
       bottom: 0;
       right: 0;
+
+      @media screen and (max-width: 1439px) {
+        width: 237px;
+      }
     }
   }
 
@@ -206,6 +257,10 @@
     line-height: 100%;
     width: 288px;
     height: 60px;
+
+    @media screen and (max-width: 1439px) {
+      height: 50px;
+    }
   }
 
   &__form {

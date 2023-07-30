@@ -49,3 +49,51 @@ const serviceSwiper = new Swiper('.service__swiper', {
     clickable: true,
   },
 });
+
+class FeedbackTabs {
+  constructor(tabsSelector) {
+    this._tabs = document.querySelector(tabsSelector);
+    this._itemAll = this._tabs.querySelector('.feedback__service-item_all');
+    this._itemYandex = this._tabs.querySelector('.feedback__service-item_yandex');
+    this._itemGoogle = this._tabs.querySelector('.feedback__service-item_google');
+    this._bg = this._tabs.querySelector('.feedback__bg');
+  }
+
+  _clearBg() {
+    this._bg.classList.remove('feedback__bg_all');
+    this._bg.classList.remove('feedback__bg_yandex');
+    this._bg.classList.remove('feedback__bg_google');
+  }
+
+  _moveBgAll() {
+    this._clearBg();
+    this._bg.classList.add('feedback__bg_all');
+  }
+
+  _moveBgYandex() {
+    this._clearBg();
+    this._bg.classList.add('feedback__bg_yandex');
+  }
+
+  _moveBgGoogle() {
+    this._clearBg();
+    this._bg.classList.add('feedback__bg_google');
+  }
+
+  setEventListeners() {
+    this._itemAll.addEventListener('click', () => {
+      this._moveBgAll();
+    });
+
+    this._itemYandex.addEventListener('click', () => {
+      this._moveBgYandex();
+    });
+
+    this._itemGoogle.addEventListener('click', () => {
+      this._moveBgGoogle();
+    });
+  }
+}
+
+const feedbackTabs = new FeedbackTabs('.feedback__service-list');
+feedbackTabs.setEventListeners();

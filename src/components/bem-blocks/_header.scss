@@ -36,6 +36,11 @@
     align-items: center;
     height: 34px;
     margin-left: 39px;
+
+    @media screen and (max-width: 1439px) {
+      gap: 8px;
+      margin-left: 14px;
+    }
   }
 
   &__address {
@@ -59,6 +64,10 @@
     align-items: center;
     gap: 27px;
     margin-left: auto;
+
+    @media screen and (max-width: 1439px) {
+      gap: 15px;
+    }
   }
 
   &__phone {
