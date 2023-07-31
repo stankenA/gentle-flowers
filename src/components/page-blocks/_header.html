@@ -56,8 +56,24 @@
           <li class="header__nav-item">
             <a href="#" class="header__link">главная</a>
           </li>
-          <li class="header__nav-item header__nav-item_catalog">
-            <a href="#" class="header__link">каталог</a>
+          <li class="header__nav-item header__nav-item_hover header__nav-item_catalog">
+            <div class="header__nav-item-dropdown">
+              <a href="#" class="header__link">
+                каталог
+              </a>
+              <span class="header__nav-item-arrow"></span>
+            </div>
+            <ul class="header__dropdown">
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">что-то</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">что-то</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">пункт</a>
+              </li>
+            </ul>
           </li>
           <li class="header__nav-item">
             <a href="#" class="header__link">доставка</a>
@@ -84,4 +100,5 @@
       </ul>
     </div>
   </div>
+  <button type="button" class="header__hamburger"></button>
 </header>

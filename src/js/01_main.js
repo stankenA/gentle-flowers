@@ -1,33 +1,3 @@
-// class Header {
-//   constructor(headerSelector) {
-//     this._header = document.querySelector(headerSelector);
-//     this._menu = this._header.querySelector('.header__bottom');
-//     this._hamburger = this._header.querySelector('.header__hamburger');
-//     this._closeBtn = this._header.querySelector('.header__close');
-//   }
-
-//   _toggleMenu() {
-//     this._menu.classList.toggle('header__bottom_opened');
-//   }
-
-//   _closeMenu() {
-//     this._menu.classList.remove('header__bottom_opened');
-//   }
-
-//   setEventListeners() {
-//     this._hamburger.addEventListener('click', () => {
-//       this._toggleMenu();
-//     });
-
-//     this._closeBtn.addEventListener('click', () => {
-//       this._closeMenu();
-//     });
-//   }
-// }
-
-// const header = new Header('.header');
-// header.setEventListeners();
-
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
 
 const promoSwiper = new Swiper('.promo__swiper', {
@@ -59,41 +29,107 @@ class FeedbackTabs {
     this._bg = this._tabs.querySelector('.feedback__bg');
   }
 
-  _clearBg() {
-    this._bg.classList.remove('feedback__bg_all');
-    this._bg.classList.remove('feedback__bg_yandex');
-    this._bg.classList.remove('feedback__bg_google');
+  _chooseAll() {
+    this._itemAll.classList.add('feedback__service-item_active');
   }
 
-  _moveBgAll() {
-    this._clearBg();
-    this._bg.classList.add('feedback__bg_all');
+  _chooseYandex() {
+    this._itemYandex.classList.add('feedback__service-item_active');
   }
 
-  _moveBgYandex() {
-    this._clearBg();
-    this._bg.classList.add('feedback__bg_yandex');
+  _chooseGoogle() {
+    this._itemGoogle.classList.add('feedback__service-item_active');
   }
 
-  _moveBgGoogle() {
-    this._clearBg();
-    this._bg.classList.add('feedback__bg_google');
+  _clear() {
+    this._itemAll.classList.remove('feedback__service-item_active');
+    this._itemYandex.classList.remove('feedback__service-item_active');
+    this._itemGoogle.classList.remove('feedback__service-item_active');
+  }
+
+  _checkBg(item, percentage) {
+    if (item.classList.contains('feedback__service-item_active')) {
+      this._bg.style.left = `${percentage}`;
+    }
   }
 
   setEventListeners() {
     this._itemAll.addEventListener('click', () => {
-      this._moveBgAll();
+      this._clear();
+      this._chooseAll();
+      this._checkBg(this._itemAll, '16%');
     });
 
-    this._itemYandex.addEventListener('click', () => {
-      this._moveBgYandex();
+    this._itemYandex.addEventListener('click', (evt) => {
+      this._clear();
+      this._chooseYandex();
+      this._checkBg(this._itemYandex, '50%');
     });
 
     this._itemGoogle.addEventListener('click', () => {
-      this._moveBgGoogle();
+      this._clear();
+      this._chooseGoogle();
+      this._checkBg(this._itemGoogle, '84%');
     });
   }
 }
 
 const feedbackTabs = new FeedbackTabs('.feedback__service-list');
 feedbackTabs.setEventListeners();
+
+class Header {
+  constructor(headerSelector) {
+    this._header = document.querySelector(headerSelector);
+    this._hamburger = this._header.querySelector('.header__hamburger');
+    this._catalog = this._header.querySelector('.header__nav-item_catalog');
+    this._catalogArrow = this._catalog.querySelector('.header__nav-item-arrow');
+    this._dropdown = this._header.querySelector('.header__dropdown');
+    this._timeout = undefined;
+  }
+
+  _toggleHeader() {
+    this._header.classList.toggle('header_opened');
+    this._hamburger.classList.toggle('header__hamburger_opened');
+  }
+
+  _toggleCatalog() {
+    this._dropdown.classList.toggle('header__dropdown_opened');
+    this._catalogArrow.classList.toggle('header__nav-item-arrow_opened');
+
+    if (!this._dropdown.classList.contains('header__dropdown_opened')) {
+      this._dropdown.style.height = '0px';
+    } else {
+      this._dropdown.style.height = `${this._dropdown.scrollHeight}px`;
+    }
+  }
+
+  toggleHover() {
+    if (window.innerWidth <= 1023) {
+      this._catalog.classList.remove('header__nav-item_hover');
+    } else {
+      this._catalog.classList.add('header__nav-item_hover');
+    }
+  }
+
+  setEventListeners() {
+    this._hamburger.addEventListener('click', () => {
+      this._toggleHeader();
+    });
+
+    this._catalogArrow.addEventListener('click', () => {
+      this._toggleCatalog();
+    })
+
+    window.addEventListener('resize', () => {
+      clearTimeout(this._timeout);
+
+      this._timeout = setTimeout(() => {
+        this.toggleHover();
+      }, 500)
+    })
+  }
+}
+
+const header = new Header('.header');
+header.setEventListeners();
+header.toggleHover();
