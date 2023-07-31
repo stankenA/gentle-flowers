@@ -21,6 +21,10 @@
     @media screen and (max-width: 1439px) {
       height: 493px;
     }
+
+    @media screen and (max-width: 767px) {
+      height: 410px;
+    }
   }
 
   &__swiper-wrapper {
@@ -40,12 +44,18 @@
     border-bottom: 1px solid #fff;
     padding-bottom: 4px;
     padding-left: 3px;
-    z-index: 2;
+    z-index: 1;
     top: 62px;
     left: 72px;
 
     @media screen and (max-width: 1439px) {
       left: 54px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      left: 23px;
+      top: 23px;
+      font-size: 20px;
     }
   }
 
@@ -61,6 +71,16 @@
       padding-top: 156px;
       padding-left: 54px;
     }
+
+    @media screen and (max-width: 1023px) {
+      padding-top: 120px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+    }
   }
 
   &__swiper-title {
@@ -69,9 +89,16 @@
     font-weight: 700;
     line-height: 100%;
     margin: 0;
+    position: relative;
+    z-index: 4;
 
     @media screen and (max-width: 1439px) {
       font-size: 68px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 36px;
+      text-align: center;
     }
   }
 
@@ -81,10 +108,18 @@
     font-weight: 500;
     line-height: 100%;
     margin: 13px 0 86px;
+    position: relative;
+    z-index: 4;
 
     @media screen and (max-width: 1439px) {
       font-size: 32px;
       margin-bottom: 81px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      margin-bottom: 0;
+      text-align: center;
     }
   }
 
@@ -94,6 +129,14 @@
     right: 0;
     bottom: 0;
     height: 100%;
+
+    @media screen and (max-width: 767px) {
+      width: 268px;
+      height: 268px;
+      bottom: 44px;
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 
   &__swiper-pagination {
@@ -105,6 +148,10 @@
     width: unset !important;
     z-index: 3;
 
+    @media screen and (max-width: 1023px) {
+      bottom: 11px !important;
+    }
+
     .swiper-pagination-bullet {
       width: 15px;
       height: 15px;
@@ -113,6 +160,11 @@
       background-color: transparent;
       opacity: 1;
       @include transition;
+
+      @media screen and (max-width: 1023px) {
+        width: 11px;
+        height: 11px;
+      }
     }
 
     .swiper-pagination-bullet-active {
@@ -135,6 +187,23 @@
     @media screen and (max-width: 1439px) {
       grid-auto-rows: 435px;
     }
+
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-auto-rows: 365px;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'first'
+        'second'
+        'third'
+        'fourth'
+        'fifth'
+        'sixth';
+      grid-template-rows: repeat(5, 338px) 417px;
+    }
   }
 
   &__card {
@@ -149,6 +218,11 @@
     padding: 30px 25px;
     position: relative;
     overflow: hidden;
+
+    @media screen and (max-width: 1023px) {
+      padding: 13px 15px;
+    }
+
 
     &_1 {
       grid-area: first;
@@ -190,11 +264,38 @@
     font-weight: 700;
     line-height: normal;
     margin: 0;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
+
+      &_form {
+        text-align: start;
+      }
+    }
   }
 
   &__img {
     display: block;
     object-fit: contain;
+
+    @media screen and (max-width: 767px) {
+      width: 76% !important;
+      height: 76% !important;
+      top: 49% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
 
     &_1 {
       height: 300px;
@@ -213,6 +314,11 @@
         width: 446px;
         top: 55px;
       }
+
+      @media screen and (max-width: 1023px) {
+        width: 374px;
+        top: 37px;
+      }
     }
 
     &_3 {
@@ -222,6 +328,10 @@
 
       @media screen and (max-width: 1439px) {
         width: 454px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        width: 348px;
       }
     }
 
@@ -236,15 +346,26 @@
         height: 234px;
       }
     }
+  }
 
-    &_6 {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+  &__form-img {
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 
-      @media screen and (max-width: 1439px) {
-        width: 237px;
-      }
+    @media screen and (max-width: 1439px) {
+      width: 237px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      width: 172px;
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 69%;
     }
   }
 
@@ -261,12 +382,38 @@
     @media screen and (max-width: 1439px) {
       height: 50px;
     }
+
+    @media screen and (max-width: 1023px) {
+      width: 248px;
+      height: 50px;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+
+      &_swiper {
+        bottom: 34px;
+      }
+
+      position: relative;
+      z-index: 4;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 3;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
   }
 
   &__txt {
@@ -276,6 +423,12 @@
     line-height: normal;
     margin: 13px 0 50px;
     max-width: 587px;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 14px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+    }
   }
 
   &__fieldset {
@@ -286,6 +439,14 @@
     flex-direction: column;
     gap: 20px;
     width: 472px;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      gap: 10px;
+    }
   }
 
   &__input {
@@ -300,6 +461,11 @@
     background-color: transparent;
     border-radius: 10px;
     border: 1px solid #FFF;
+
+    @media screen and (max-width: 1023px) {
+      height: 50px;
+      font-size: 14px;
+    }
 
     &:focus-visible {
       outline: 1px solid #fff;
@@ -320,5 +486,15 @@
     font-weight: 700;
     line-height: 100%;
     margin-top: auto;
+
+    @media screen and (max-width: 1023px) {
+      height: 50px;
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 }

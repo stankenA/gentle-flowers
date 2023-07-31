@@ -1,6 +1,10 @@
 .control {
   margin-bottom: 60px;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 33px;
+  }
+
   &__wrapper {
     width: var(--content-width);
     margin: 0 auto;
@@ -11,6 +15,16 @@
 
     @media screen and (max-width: 1439px) {
       height: 680px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      height: 980px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: 700px;
     }
   }
 
@@ -24,11 +38,22 @@
     @media screen and (max-width: 1439px) {
       margin-bottom: 60px;
     }
+
+    @media screen and (max-width: 1023px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      text-align: start;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__list {
     @include reset-list;
-    list-style: disc;
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -36,6 +61,17 @@
 
     @media screen and (max-width: 1439px) {
       margin-left: 90px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      margin-left: 147px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      gap: 64px;
+      max-width: 290px;
     }
   }
 
@@ -48,13 +84,30 @@
     padding-left: 30px;
     max-width: 462px;
     position: relative;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
 
   &__number {
     display: block;
     position: absolute;
-    left: -90px;
-    top: -30px;
+    left: -88px;
+    top: -66px;
+
+    &_first {
+      left: -67px;
+      top: -56px;
+    }
+
+    @media screen and (max-width: 767px) {
+      object-fit: contain;
+      width: 45px;
+      height: 45px;
+      left: 2px;
+      top: -42px;
+    }
   }
 
   &__img {
@@ -67,6 +120,18 @@
 
     @media screen and (max-width: 1439px) {
       width: 326px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -175px;
+      width: 270px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 160px;
+      bottom: -105px;
     }
   }
 }

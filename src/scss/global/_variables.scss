@@ -3,6 +3,12 @@
 
   @media screen and (max-width: 1439px) {
     --content-width: 980px;
+    color: unset;
+  }
+
+  @media screen and (max-width: 1023px) {
+    --content-width: 96%;
+    color: unset; // почему-то возник баг, из-за которого на этом разрешении новое правило с шириной контента игнорировалось и переписывалось предыдущим, и каким-то образом дополнительное свойство в этих запросах всё фиксит
   }
 
   @media screen and (max-width: 767px) {
