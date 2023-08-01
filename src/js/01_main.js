@@ -196,3 +196,58 @@ allPopupOpenBtns.forEach((btn) => {
     popup.openPopup();
   });
 });
+
+class Filter {
+  constructor(filterSelector) {
+    this._filter = document.querySelector(filterSelector);
+    this._filterBtn = this._filter.querySelector('.catalog__filter-btn');
+    this._closeBtn = this._filter.querySelector('.catalog__filter-close');
+    this._dropdowns = this._filter.querySelectorAll('.catalog__filter-dropdown');
+  }
+
+  openFilter() {
+    this._filter.classList.add('catalog__filter_opened');
+  }
+
+  _closeFilter() {
+    this._filter.classList.remove('catalog__filter_opened');
+  }
+
+  _toggleDropdown(item) {
+    const dropdownList = item.querySelector('.catalog__filter-dropdown-list');
+    const arrow = item.querySelector('.catalog__filter-arrow');
+
+    dropdownList.classList.toggle('catalog__filter-dropdown-list_opened');
+    arrow.classList.toggle('catalog__filter-arrow_opened');
+  }
+
+  setEventListeners() {
+    this._closeBtn.addEventListener('click', () => {
+      this._closeFilter();
+    });
+
+    this._dropdowns.forEach((item) => {
+      item.addEventListener('click', () => {
+        this._toggleDropdown(item);
+      });
+
+      const listItems = item.querySelectorAll('.catalog__filter-dropdown-item');
+      const value = item.querySelector('.catalog__filter-dropdown-value');
+      listItems.forEach((el) => {
+        el.addEventListener('click', (evt) => {
+          value.textContent = evt.target.textContent;
+        });
+      })
+    })
+  }
+}
+
+if (document.querySelector('.catalog__filter-btn')) {
+  const filter = new Filter('.catalog__filter');
+  filter.setEventListeners();
+
+  const filterBtn = document.querySelector('.catalog__filter-btn');
+  filterBtn.addEventListener('click', () => {
+    filter.openFilter();
+  })
+}

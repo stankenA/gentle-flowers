@@ -122,8 +122,8 @@
   <button type="button" class="header__hamburger"></button>
 </header>
   <main class="main">
-    <section class="product">
-  <div class="product__wrapper">
+    <section class="catalog">
+  <div class="catalog__wrapper">
     <nav class="breadcrumbs">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
@@ -139,155 +139,49 @@
         </li>
       </ul>
     </nav>
-    <div class="product__content">
-      <div class="product__gallery">
-        <div class="product__swiper swiper">
-          <ul class="product__swiper-wrapper swiper-wrapper list">
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-1.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__swiper-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-          </ul>
-        </div>
-        <div class="product__thumbs swiper" thumbsSlider="">
-          <ul class="product__thumbs-wrapper swiper-wrapper list">
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-1.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
-            <li class="product__thumbs-item swiper-slide">
-              <img src="./img/product-img-2.jpg" alt="Картинка товара" class="product__img">
-            </li>
+    <form class="catalog__filter catalog__filter_opened">
+      <div class="catalog__filter-container">
+        <span class="catalog__filter-type">цветок:</span>
+        <div class="catalog__filter-dropdown">
+          <span class="catalog__filter-dropdown-value">Тюльпан</span>
+          <span class="catalog__filter-arrow"></span>
+          <ul class="catalog__filter-dropdown-list">
+            <li class="catalog__filter-dropdown-item">Розы</li>
+            <li class="catalog__filter-dropdown-item">Пионы</li>
+            <li class="catalog__filter-dropdown-item">Бум</li>
+            <li class="catalog__filter-dropdown-item">Что-то очень длинное</li>
           </ul>
         </div>
       </div>
-      <div class="product__info">
-        <div class="product__description">
-          <h1 class="product__title">
-            Букет <br>
-            <strong>NEW YORK</strong>
-          </h1>
-          <ul class="product__description-list">
-            <li class="product__description-item">
-              <span class="product__description-item-category">Страна:</span>
-              Нидерланды
-            </li>
-            <li class="product__description-item">
-              <span class="product__description-item-category">Размер:</span>
-              Ширина 40 см &#8194;&#8194;Высота 45 см
-            </li>
-            <li class="product__description-item">
-              <span class="product__description-item-category">Состав:</span>
-              <ul class="product__composition">
-                <li class="product__composition-item">
-                  Роза Эквадор Exrlorer <strong>9шт</strong>
-                </li>
-                <li class="product__composition-item">
-                  Роза кустовая пионовидная мадам бомбастик <strong>6шт</strong>
-                </li>
-                <li class="product__composition-item">
-                  Эвкалипт <strong>3шт</strong>
-                </li>
-              </ul>
-            </li>
+      <div class="catalog__filter-container">
+        <span class="catalog__filter-type">фильтр:</span>
+        <div class="catalog__filter-dropdown catalog__filter-dropdown_second">
+          <span class="catalog__filter-dropdown-value">Тюльпан</span>
+          <span class="catalog__filter-arrow"></span>
+          <ul class="catalog__filter-dropdown-list">
+            <li class="catalog__filter-dropdown-item">Розы</li>
+            <li class="catalog__filter-dropdown-item">Пионы</li>
+            <li class="catalog__filter-dropdown-item">Бум</li>
+            <li class="catalog__filter-dropdown-item">Что-то очень длинное</li>
           </ul>
-          <p class="product__description-txt">
-            Авторский и в то же время классический букет. Нежнейшее сочетанием с пионовидными кустовыми розами и
-            премиальными розами Эквадор. Идеальный вариант на любой случай
-          </p>
-          <button type="button" class="product__like"></button>
-        </div>
-        <div class="product__delivery">
-          <h2 class="product__subtitle">
-            <span class="product__delivery-icon"></span> Доставка
-          </h2>
-          <p class="product__delivery-txt">
-            Доставка бесплатно 24/7 по Санкт-Петербургу, в согласованную дату.Время доставки – от 1 часа. Возможна
-            срочная доставка по согласованию с менеджером.
-          </p>
         </div>
       </div>
-      <div class="product__features">
-        <ul class="product__features-list">
-          <li class="product__features-item">
-            <img src="./img/camera-icon.svg" alt="Фотоаппарат" class="product__features-img">
-            <p class="product__features-txt">
-              Фото собранного букета
-            </p>
-          </li>
-          <li class="product__features-item">
-            <img src="./img/document-icon.svg" alt="Фотоаппарат" class="product__features-img">
-            <p class="product__features-txt">
-              Фирменная открытка
-            </p>
-          </li>
-          <li class="product__features-item">
-            <img src="./img/leaf-icon.svg" alt="Фотоаппарат" class="product__features-img">
-            <p class="product__features-txt">
-              Гарантия свежести
-            </p>
-          </li>
-          <li class="product__features-item">
-            <img src="./img/car-icon.svg" alt="Фотоаппарат" class="product__features-img">
-            <p class="product__features-txt">
-              Бесплатная доставка <br> 27/7
-            </p>
-          </li>
-        </ul>
+      <div class="catalog__filter-container catalog__filter-container_price">
+        <span class="catalog__filter-type">стоимость:</span>
+        <fieldset class="catalog__fieldset">
+          <span class="catalog__range">от</span>
+          <input type="number" class="catalog__input">
+          <span class="catalog__range">до</span>
+          <input type="number" class="catalog__input">
+        </fieldset>
       </div>
-      <div class="product__order">
-        <span class="product__order-arrow"></span>
-        <span class="product__order-price">4 290.00 ₽</span>
-        <div class="product__order-bottom">
-          <button class="product__order-btn button">заказать</button>
-          <a href="#" class="product__order-link button"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    <section class="cards">
-  <div class="cards__wrapper">
-    <div class="cards__top">
-      <h2 class="cards__title">
-        Рекомендуем вместе с этим
-      </h2>
-      <a href="#" class="cards__more">показать еще</a>
-    </div>
-    <ul class="cards__list">
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <button type="submit" class="catalog__submit button">найти</button>
+      <button type="button" class="catalog__filter-close"></button>
+    </form>
+    <button type="button" class="catalog__filter-btn"></button>
+    <ul class="cards__list cards__list_large">
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
@@ -297,8 +191,8 @@
           9 999 ₽
         </button>
       </li>
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
@@ -308,8 +202,8 @@
           9 999 ₽
         </button>
       </li>
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
@@ -319,8 +213,8 @@
           9 999 ₽
         </button>
       </li>
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
@@ -330,8 +224,8 @@
           9 999 ₽
         </button>
       </li>
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
@@ -341,8 +235,30 @@
           9 999 ₽
         </button>
       </li>
-      <li class="cards__item">
-        <span class="cards__item-badge cards__item-badge_red">HIT</span>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
+        <button class="cards__like"></button>
+        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
+        <h3 class="cards__item-title">
+          Название букета
+        </h3>
+        <button class="cards__item-btn button">
+          9 999 ₽
+        </button>
+      </li>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
+        <button class="cards__like"></button>
+        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
+        <h3 class="cards__item-title">
+          Название букета
+        </h3>
+        <button class="cards__item-btn button">
+          9 999 ₽
+        </button>
+      </li>
+      <li class="cards__item cards__item_large">
+        <span class="cards__item-badge cards__item-badge_green">%</span>
         <button class="cards__like"></button>
         <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
         <h3 class="cards__item-title">
