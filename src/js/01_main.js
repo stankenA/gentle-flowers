@@ -20,6 +20,30 @@ const serviceSwiper = new Swiper('.service__swiper', {
   },
 });
 
+// Product
+
+export const thumbsSwiper = new Swiper('.product__thumbs', {
+  grabCursor: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 5,
+      spaceBetween: 12,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 24,
+    }
+  },
+});
+
+export const productSwiper = new Swiper('.product__swiper', {
+  grabCursor: true,
+  watchSlidesProgress: true,
+  thumbs: {
+    swiper: thumbsSwiper,
+  },
+});
+
 class FeedbackTabs {
   constructor(tabsSelector) {
     this._tabs = document.querySelector(tabsSelector);
@@ -74,8 +98,10 @@ class FeedbackTabs {
   }
 }
 
-const feedbackTabs = new FeedbackTabs('.feedback__service-list');
-feedbackTabs.setEventListeners();
+if (document.querySelector('.feedback__service-list')) {
+  const feedbackTabs = new FeedbackTabs('.feedback__service-list');
+  feedbackTabs.setEventListeners();
+}
 
 class Header {
   constructor(headerSelector) {
