@@ -16,6 +16,14 @@
     align-items: center;
     gap: 14px;
 
+    &_main {
+      margin-left: 50px;
+
+      @media screen and (max-width: 767px) {
+        margin-left: 0;
+      }
+    }
+
     @media screen and (max-width: 767px) {
       font-size: 24px;
       gap: 18px;
