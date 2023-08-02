@@ -122,153 +122,84 @@
   <button type="button" class="header__hamburger"></button>
 </header>
   <main class="main">
-    <section class="catalog">
-  <div class="catalog__wrapper">
-    <nav class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">главная</a>
-        </li>
-        <span class="breadcrumbs__line">/</span>
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">каталог</a>
-        </li>
-        <span class="breadcrumbs__line">/</span>
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">букет new york</a>
-        </li>
-      </ul>
-    </nav>
-    <form class="catalog__filter">
-      <div class="catalog__filter-container">
-        <span class="catalog__filter-type">цветок:</span>
-        <div class="catalog__filter-dropdown">
-          <span class="catalog__filter-dropdown-value">Тюльпан</span>
-          <span class="catalog__filter-arrow"></span>
-          <ul class="catalog__filter-dropdown-list">
-            <li class="catalog__filter-dropdown-item">Розы</li>
-            <li class="catalog__filter-dropdown-item">Пионы</li>
-            <li class="catalog__filter-dropdown-item">Бум</li>
-            <li class="catalog__filter-dropdown-item">Что-то очень длинное</li>
-          </ul>
+    <section class="delivery">
+  <div class="delivery__wrapper">
+    <h1 class="delivery__title">
+      <span class="delivery__icon"></span>
+      Доставка
+    </h1>
+    <div class="delivery__content">
+      <div class="delivery__info">
+        <p class="delivery__txt">
+          Бесплатная доставка по Санкт - Петербургу в радиусе 15км 24 часа. Минимальная сумма для бесплатной доставки -
+          2000р. Профессиональные, вежливые курьеры.
+        </p>
+        <p class="delivery__txt">
+          <strong>1. Оплата наличными или картой курьеру</strong>
+        </p>
+        <ul class="delivery__list">
+          <li class="delivery__item">
+            <p class="delivery__txt">
+              Оплатить наличными курьеру, Вы можете при получении заказа.
+            </p>
+          </li>
+          <li class="delivery__item">
+            <p class="delivery__txt">
+              Так же Вы можете оплатить заказ наличными в любом из наших салонов.
+            </p>
+          </li>
+        </ul>
+        <p class="delivery__txt">
+          <strong>2. Оплата банковской картой</strong>
+        </p>
+        <p class="delivery__txt">
+          Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Товар банковской картой Visa, Mastercard,
+          Maestro, МИР. После подтверждения заказа откроется защищенное окно с платежной страницей процессингового
+          центра где Вам необходимо ввести данные Вашей банковской карты. Для дополнительной аутентификации держателя
+          карты используется протокол 3D Secure.
+        </p>
+        <p class="delivery__txt">
+          <strong>Гарантии безопасности</strong>
+        </p>
+        <p class="delivery__txt">
+          Процессинговый центр защищает и обрабатывает данные Вашей банковской карты по стандарту безопасности PCI DSS
+          3.0. Передача информации в платежный шлюз происходит с применением технологии шифрования SSL. Дальнейшая
+          передача информации происходит по закрытым банковским сетям, имеющим наивысший уровень надежности.
+          CloudPayments не передает данные Вашей карты нам и иным третьим лицам. Для дополнительной аутентификации
+          держателя карты используется протокол 3D Secure.
+        </p>
+        <p class="delivery__txt">
+          <strong>Безопасность онлайн платежей</strong>
+        </p>
+        <p class="delivery__txt">
+          Предоставляемая Вами персональная информация (имя, адрес, телефон, e-mail, номер кредитной карты) является
+          конфиденциальной и не подлежит разглашению. Данные Вашей кредитной карты передаются только в зашифрованном
+          виде и не сохраняются на нашем Web-сервере.
+        </p>
+        <p class="delivery__txt">
+          <strong>Бесплатная доставка по Санкт - Петербургу 24 часа. Профессиональные, вежливые курьеры.</strong>
+        </p>
+      </div>
+      <aside class="delivery__aside">
+        <div class="delivery__map">
+
         </div>
-      </div>
-      <div class="catalog__filter-container">
-        <span class="catalog__filter-type">фильтр:</span>
-        <div class="catalog__filter-dropdown catalog__filter-dropdown_second">
-          <span class="catalog__filter-dropdown-value">Тюльпан</span>
-          <span class="catalog__filter-arrow"></span>
-          <ul class="catalog__filter-dropdown-list">
-            <li class="catalog__filter-dropdown-item">Розы</li>
-            <li class="catalog__filter-dropdown-item">Пионы</li>
-            <li class="catalog__filter-dropdown-item">Бум</li>
-            <li class="catalog__filter-dropdown-item">Что-то очень длинное</li>
-          </ul>
+        <div class="delivery__questions">
+          <h2 class="delivery__title">
+            Остались вопросы?
+          </h2>
+          <p class="delivery__txt">
+            Позвоните нам, напишите в мессенджере, либо отсавьте заявку на обратный звонок - наш менеджер свяжется с
+            вами и поможет с любым аспектом!
+          </p>
+          <div class="delivery__questions-bottom">
+            <button type="button" class="delivery__btn popup-btn button">обратный звонок</button>
+            <a href="#" class="delivery__link delivery__link_whatsapp button"></a>
+            <a href="#" class="delivery__link delivery__link_telegram button"></a>
+          </div>
         </div>
-      </div>
-      <div class="catalog__filter-container catalog__filter-container_price">
-        <span class="catalog__filter-type">стоимость:</span>
-        <fieldset class="catalog__fieldset">
-          <span class="catalog__range">от</span>
-          <input type="number" class="catalog__input">
-          <span class="catalog__range">до</span>
-          <input type="number" class="catalog__input">
-        </fieldset>
-      </div>
-      <button type="submit" class="catalog__submit button">найти</button>
-      <button type="button" class="catalog__filter-close"></button>
-    </form>
-    <button type="button" class="catalog__filter-btn"></button>
-    <ul class="cards__list cards__list_large">
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-      <li class="cards__item cards__item_large">
-        <span class="cards__item-badge cards__item-badge_green">%</span>
-        <button class="cards__like"></button>
-        <img src="./img/cards-img.png" alt="Изображение карточки" class="cards__img">
-        <h3 class="cards__item-title">
-          Название букета
-        </h3>
-        <button class="cards__item-btn button">
-          9 999 ₽
-        </button>
-      </li>
-    </ul>
+      </aside>
+    </div>
   </div>
 </section>
   </main>
