@@ -111,6 +111,10 @@ class Header {
     this._catalogArrow = this._catalog.querySelector('.header__nav-item-arrow');
     this._dropdown = this._header.querySelector('.header__dropdown');
     this._timeout = undefined;
+
+    this._searchInputContainer = this._header.querySelector('.header__interact-input-row');
+    this._searchBtn = this._header.querySelector('.header__interact-btn');
+    this._closeSearchBtn = this._header.querySelector('.header__interact-close');
   }
 
   _toggleHeader() {
@@ -129,6 +133,14 @@ class Header {
     }
   }
 
+  _openSearchInput() {
+    this._searchInputContainer.classList.add('header__interact-input-row_opened');
+  }
+
+  _closeSearchInput() {
+    this._searchInputContainer.classList.remove('header__interact-input-row_opened');
+  }
+
   toggleHover() {
     if (window.innerWidth <= 1023) {
       this._catalog.classList.remove('header__nav-item_hover');
@@ -143,8 +155,18 @@ class Header {
     });
 
     this._catalogArrow.addEventListener('click', () => {
-      this._toggleCatalog();
-    })
+      if (window.innerWidth <= 1023) {
+        this._toggleCatalog();
+      }
+    });
+
+    this._searchBtn.addEventListener('click', () => {
+      this._openSearchInput();
+    });
+
+    this._closeSearchBtn.addEventListener('click', () => {
+      this._closeSearchInput();
+    });
 
     window.addEventListener('resize', () => {
       clearTimeout(this._timeout);
@@ -250,4 +272,40 @@ if (document.querySelector('.catalog__filter-btn')) {
   filterBtn.addEventListener('click', () => {
     filter.openFilter();
   })
+}
+
+class TimeDropdown {
+  constructor(timeContainerSelector) {
+    this._container = document.querySelector(timeContainerSelector);
+    this._value = this._container.querySelector('.profile__adress-time-value');
+    this._arrow = this._container.querySelector('.profile__adress-arrow');
+    this._dropdown = this._container.querySelector('.profile__adress-time-dropdown');
+    this._items = this._dropdown.querySelectorAll('.profile__adress-time-dropdown-item');
+  }
+
+  _setValue(value) {
+    this._value.textContent = value;
+  }
+
+  _toggleDropdown() {
+    this._dropdown.classList.toggle('profile__adress-time-dropdown_opened');
+    this._arrow.classList.toggle('profile__adress-arrow_opened');
+  }
+
+  setEventListeners() {
+    this._container.addEventListener('click', () => {
+      this._toggleDropdown();
+    });
+
+    this._items.forEach((item) => {
+      item.addEventListener('click', (evt) => {
+        this._setValue(evt.target.textContent)
+      });
+    })
+  }
+}
+
+if (document.querySelector('.profile__adress-time')) {
+  const timeDropdown = new TimeDropdown('.profile__adress-time');
+  timeDropdown.setEventListeners();
 }

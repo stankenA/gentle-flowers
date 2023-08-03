@@ -1,0 +1,331 @@
+<section class="profile">
+  <div class="profile__wrapper">
+    <h1 class="profile__title">
+      <span class="profile__icon"></span>
+      Личный кабинет
+    </h1>
+    <div class="profile__content">
+      <div class="profile__aside-column">
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Персональная Информация
+          </h2>
+          <fieldset class="profile__fieldset">
+            <div class="profile__input-row">
+              <img src="./img/profile-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="text" class="profile__input" placeholder="Имя">
+            </div>
+            <div class="profile__input-row">
+              <input type="text" class="profile__input" placeholder="Фамилия">
+            </div>
+          </fieldset>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Логин и Пароль
+          </h2>
+          <fieldset class="profile__fieldset">
+            <div class="profile__input-row">
+              <img src="./img/mail-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="mail" class="profile__input" placeholder="example@mail.ru">
+            </div>
+            <div class="profile__input-row">
+              <img src="./img/lock-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="password" class="profile__input" placeholder="********************">
+            </div>
+            <div class="profile__input-row">
+              <input type="password" class="profile__input" placeholder="Повторите пароль">
+            </div>
+          </fieldset>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Способ доставки
+          </h2>
+          <div class="profile__delivery">
+            <button type="button" class="profile__delivery-btn">доставка</button>
+            <button type="button" class="profile__delivery-btn">самовывоз</button>
+          </div>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+      </div>
+      <div class="profile__main">
+        <div class="profile__box">
+          <h2 class="profile__subtitle">
+            Адрес Доставки
+          </h2>
+          <div class="profile__container profile__container_large profile__container_active">
+            <ul class="profile__adress-list">
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Жмышенко Валерий
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Улица Пушкина дом 10/1, 214
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Санкт-Петербург 196548
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Санкт-Петербург
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Российская Федерация
+                </p>
+              </li>
+            </ul>
+            <div class="profile__container-corner">
+              <p class="profile__txt profile__txt_red">
+                используется
+              </p>
+              <div class="profile__container-circle">
+                <span class="profile__container-checkmark"></span>
+              </div>
+            </div>
+          </div>
+          <div class="profile__container profile__container_active">
+            <p class="profile__txt profile__txt_grey">
+              добавить адрес...
+            </p>
+            <div class="profile__container-corner">
+              <div class="profile__container-circle">
+              </div>
+            </div>
+          </div>
+          <div class="profile__bottom">
+            <button type="submit" class="profile__submit button">сохранить</button>
+            <button type="button" class="profile__change">изменить способ доставки</button>
+          </div>
+          <div class="profile__container profile__container_large">
+            <form class="profile__adress-form">
+              <fieldset class="profile__adress-fieldset">
+                <input type="text" class="profile__input profile__input_city" placeholder="Город">
+                <input type="text" class="profile__input" placeholder="Улица, дом, номер квартиры (опционально)">
+              </fieldset>
+              <fieldset class="profile__adress-fieldset">
+                <div class="profile__adress-row">
+                  <p class="profile__txt">
+                    Желаемое время доставки
+                  </p>
+                  <div class="profile__adress-time">
+                    <span class="profile__adress-time-value">00:00 - 00:30</span>
+                    <span class="profile__adress-arrow"></span>
+                    <ul class="profile__adress-time-dropdown">
+                      <li class="profile__adress-time-dropdown-item">
+                        10:00 - 10:30
+                      </li>
+                      <li class="profile__adress-time-dropdown-item">
+                        11:00 - 12:00
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="profile__adress-row">
+                  <p class="profile__txt">
+                    Дата доставки
+                  </p>
+                  <input type="date" class="profile__input profile__input_date">
+                </div>
+              </fieldset>
+            </form>
+            <div class="profile__container-corner">
+              <div class="profile__container-circle">
+              </div>
+            </div>
+          </div>
+          <div class="profile__options">
+            <div class="profile__options-first-column">
+              <h2 class="profile__subtitle">
+                Покупатель
+              </h2>
+              <div class="profile__container">
+                <p class="profile__txt">
+                  <strong>Зарегистрироваться</strong>
+                </p>
+                <div class="profile__checkbox">
+                  <label for="yes" class="profile__label">
+                    <input id="yes" type="radio" class="profile__input profile__input-checkbox"
+                      name="registration-checkbox" checked>
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Да</p>
+                  </label>
+                  <label for="no" class="profile__label">
+                    <input id="no" type="radio" class="profile__input profile__input-checkbox"
+                      name="registration-checkbox">
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Нет</p>
+                  </label>
+                </div>
+                <p class="profile__txt">
+                  <strong>Получатель</strong>
+                </p>
+                <div class="profile__checkbox">
+                  <label for="reciver" class="profile__label">
+                    <input id="reciver" type="radio" class="profile__input profile__input-checkbox"
+                      name="reciver-checkbox" checked>
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Я получатель заказа</p>
+                  </label>
+                  <label for="not-reciver" class="profile__label">
+                    <input id="not-reciver" type="radio" class="profile__input profile__input-checkbox"
+                      name="reciver-checkbox">
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Получатель другой человек</p>
+                  </label>
+                </div>
+                <p class="profile__txt profile__txt_subtitle">
+                  <strong>Email</strong>
+                </p>
+                <input type="email" class="profile__input" placeholder="example@mail.ru">
+                <p class="profile__txt profile__txt_subtitle">
+                  <strong>Телефон</strong>
+                </p>
+                <input type="email" class="profile__input" placeholder="+7 ...">
+              </div>
+              <h2 class="profile__subtitle">
+                Комментарий
+              </h2>
+              <textarea class="profile__textarea" placeholder="Комментарий..."></textarea>
+            </div>
+            <div class="profile__options-second-column">
+              <h2 class="profile__subtitle">
+                Способ доставки
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    Доставка курьером (738км) - 23 616 р
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Самовывоз
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="profile__subtitle">
+                Способ оплаты
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    ЮКаssа (банковские карты, электронные деньги и другое)
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Оплата при получении
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="profile__subtitle">
+                Где нас нашли
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    Яндекс поиск
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Google поиск
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    2GIS
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Яндекс карты
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Instagram
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Рекомендация
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Обращался ранее
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Другое
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="profile__box">
+          <h2 class="profile__subtitle">
+            История заказов
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

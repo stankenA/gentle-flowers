@@ -162,6 +162,10 @@
     font-weight: 400;
     line-height: 20px;
 
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
     @media screen and (max-width: 767px) {
       padding-right: 36px;
       font-size: 16px;
