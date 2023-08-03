@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
+  <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Название сайта</title>
+</head>
+
+<!-- "favicon":"img/favicons/favicon", -->
+
+<body class="page">
+  <header class="header">
+  <div class="header__top">
+    <a href="./index.html" class="header__link">
+      <img src="./img/logo.png" alt="Логотип" class="header__logo">
+    </a>
+    <ul class="header__address-list">
+      <li class="header__address">
+        Фонтанки, 122
+      </li>
+      <span class="header__line"></span>
+      <li class="header__address">
+        Дыбенко, 24
+      </li>
+      <span class="header__line"></span>
+      <li class="header__address">
+        Ленсовета, 87
+      </li>
+      <span class="header__line"></span>
+      <li class="header__address">
+        24/7
+      </li>
+    </ul>
+    <div class="header__info">
+      <a href="#" class="header__phone">+7 (921) 908-00-07</a>
+      <span class="header__line"></span>
+      <button type="button" class="header__call popup-btn button">обратный звонок</button>
+      <span class="header__line"></span>
+      <ul class="header__contacts">
+        <li class="header__contacts-item">
+          <a href="#" class="header__link">
+            <img src="./img/telegram-icon.svg" alt="Иконка соцсети" class="header__icon">
+          </a>
+        </li>
+        <li class="header__contacts-item">
+          <a href="#" class="header__link">
+            <img src="./img/vk-icon.svg" alt="Иконка соцсети" class="header__icon">
+          </a>
+        </li>
+        <li class="header__contacts-item">
+          <a href="#" class="header__link">
+            <img src="./img/instagram-icon.svg" alt="Иконка соцсети" class="header__icon">
+          </a>
+        </li>
+        <li class="header__contacts-item">
+          <a href="#" class="header__link">
+            <img src="./img/whatsapp-icon.svg" alt="Иконка соцсети" class="header__icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="header__bottom-content">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="./index.html" class="header__link">главная</a>
+          </li>
+          <li class="header__nav-item header__nav-item_hover header__nav-item_catalog">
+            <div class="header__nav-item-dropdown">
+              <a href="./catalog.html" class="header__link">
+                каталог
+              </a>
+              <span class="header__nav-item-arrow"></span>
+            </div>
+            <ul class="header__dropdown">
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">монобукеты</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">коробки/корзины</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="./index.html" class="header__link">новый год</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">свадебные букеты</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">хит продаж</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a href="#" class="header__link">шарики/игрушки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav-item">
+            <a href="./delivery.html" class="header__link">доставка</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="./contacts.html" class="header__link">контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="header__interact-list">
+        <li class="header__interact-item">
+          <div class="header__interact-row">
+            <div class="header__interact-input-row">
+              <input type="text" class="header__interact-input" placeholder="Поиск...">
+              <button type="button" class="header__interact-close"></button>
+            </div>
+            <button type="button" class="header__interact-btn">
+              <img src="./img/search-icon.svg" alt="Иконка" class="header__icon">
+            </button>
+          </div>
+        </li>
+        <li class="header__interact-item">
+          <a href="./profile.html" class="header__link">
+            <img src="./img/profile-icon.svg" alt="Иконка" class="header__icon">
+          </a>
+        </li>
+        <li class="header__interact-item">
+          <a href="./cart.html" class="header__link">
+            <img src="./img/cart-icon.svg" alt="Иконка" class="header__icon">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button type="button" class="header__hamburger"></button>
+</header>
+  <main class="main">
+    <section class="profile">
+  <div class="profile__wrapper">
+    <h1 class="profile__title">
+      <span class="profile__icon"></span>
+      Личный кабинет
+    </h1>
+    <div class="profile__content">
+      <div class="profile__aside-column">
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Персональная Информация
+          </h2>
+          <fieldset class="profile__fieldset">
+            <div class="profile__input-row">
+              <img src="./img/profile-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="text" class="profile__input" placeholder="Имя">
+            </div>
+            <div class="profile__input-row">
+              <input type="text" class="profile__input" placeholder="Фамилия">
+            </div>
+          </fieldset>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Логин и Пароль
+          </h2>
+          <fieldset class="profile__fieldset">
+            <div class="profile__input-row">
+              <img src="./img/mail-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="mail" class="profile__input" placeholder="example@mail.ru">
+            </div>
+            <div class="profile__input-row">
+              <img src="./img/lock-icon.svg" alt="Иконка" class="profile__input-icon">
+              <input type="password" class="profile__input" placeholder="********************">
+            </div>
+            <div class="profile__input-row">
+              <input type="password" class="profile__input" placeholder="Повторите пароль">
+            </div>
+          </fieldset>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+        <form class="profile__box">
+          <h2 class="profile__subtitle">
+            Способ доставки
+          </h2>
+          <div class="profile__delivery">
+            <button type="button" class="profile__delivery-btn">доставка</button>
+            <button type="button" class="profile__delivery-btn">самовывоз</button>
+          </div>
+          <button type="submit" class="profile__submit button">сохранить</button>
+        </form>
+      </div>
+      <div class="profile__main">
+        <div class="profile__box">
+          <h2 class="profile__subtitle">
+            Адрес Доставки
+          </h2>
+          <div class="profile__container profile__container_large profile__container_active">
+            <ul class="profile__adress-list">
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Жмышенко Валерий
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Улица Пушкина дом 10/1, 214
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Санкт-Петербург 196548
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Санкт-Петербург
+                </p>
+              </li>
+              <li class="profile__adress-item">
+                <p class="profile__txt">
+                  Российская Федерация
+                </p>
+              </li>
+            </ul>
+            <div class="profile__container-corner">
+              <p class="profile__txt profile__txt_red">
+                используется
+              </p>
+              <div class="profile__container-circle">
+                <span class="profile__container-checkmark"></span>
+              </div>
+            </div>
+          </div>
+          <div class="profile__container profile__container_active">
+            <p class="profile__txt profile__txt_grey">
+              добавить адрес...
+            </p>
+            <div class="profile__container-corner">
+              <div class="profile__container-circle">
+              </div>
+            </div>
+          </div>
+          <div class="profile__bottom">
+            <button type="submit" class="profile__submit button">сохранить</button>
+            <button type="button" class="profile__change">изменить способ доставки</button>
+          </div>
+          <div class="profile__container profile__container_large">
+            <form class="profile__adress-form">
+              <fieldset class="profile__adress-fieldset">
+                <input type="text" class="profile__input profile__input_city" placeholder="Город">
+                <input type="text" class="profile__input" placeholder="Улица, дом, номер квартиры (опционально)">
+              </fieldset>
+              <fieldset class="profile__adress-fieldset">
+                <div class="profile__adress-row">
+                  <p class="profile__txt">
+                    Желаемое время доставки
+                  </p>
+                  <div class="profile__adress-time">
+                    <span class="profile__adress-time-value">00:00 - 00:30</span>
+                    <span class="profile__adress-arrow"></span>
+                    <ul class="profile__adress-time-dropdown">
+                      <li class="profile__adress-time-dropdown-item">
+                        10:00 - 10:30
+                      </li>
+                      <li class="profile__adress-time-dropdown-item">
+                        11:00 - 12:00
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="profile__adress-row">
+                  <p class="profile__txt">
+                    Дата доставки
+                  </p>
+                  <input type="date" class="profile__input profile__input_date">
+                </div>
+              </fieldset>
+            </form>
+            <div class="profile__container-corner">
+              <div class="profile__container-circle">
+              </div>
+            </div>
+          </div>
+          <div class="profile__options">
+            <div class="profile__options-first-column">
+              <h2 class="profile__subtitle">
+                Покупатель
+              </h2>
+              <div class="profile__container">
+                <p class="profile__txt">
+                  <strong>Зарегистрироваться</strong>
+                </p>
+                <div class="profile__checkbox">
+                  <label for="yes" class="profile__label">
+                    <input id="yes" type="radio" class="profile__input profile__input-checkbox"
+                      name="registration-checkbox" checked>
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Да</p>
+                  </label>
+                  <label for="no" class="profile__label">
+                    <input id="no" type="radio" class="profile__input profile__input-checkbox"
+                      name="registration-checkbox">
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Нет</p>
+                  </label>
+                </div>
+                <p class="profile__txt">
+                  <strong>Получатель</strong>
+                </p>
+                <div class="profile__checkbox">
+                  <label for="reciver" class="profile__label">
+                    <input id="reciver" type="radio" class="profile__input profile__input-checkbox"
+                      name="reciver-checkbox" checked>
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Я получатель заказа</p>
+                  </label>
+                  <label for="not-reciver" class="profile__label">
+                    <input id="not-reciver" type="radio" class="profile__input profile__input-checkbox"
+                      name="reciver-checkbox">
+                    <div class="profile__checkbox-container">
+                      <span class="profile__checkbox-mark"></span>
+                    </div>
+                    <p class="profile__txt">Получатель другой человек</p>
+                  </label>
+                </div>
+                <p class="profile__txt profile__txt_subtitle">
+                  <strong>Email</strong>
+                </p>
+                <input type="email" class="profile__input" placeholder="example@mail.ru">
+                <p class="profile__txt profile__txt_subtitle">
+                  <strong>Телефон</strong>
+                </p>
+                <input type="email" class="profile__input" placeholder="+7 ...">
+              </div>
+              <h2 class="profile__subtitle">
+                Комментарий
+              </h2>
+              <textarea class="profile__textarea" placeholder="Комментарий..."></textarea>
+            </div>
+            <div class="profile__options-second-column">
+              <h2 class="profile__subtitle">
+                Способ доставки
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    Доставка курьером (738км) - 23 616 р
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Самовывоз
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="profile__subtitle">
+                Способ оплаты
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    ЮКаssа (банковские карты, электронные деньги и другое)
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Оплата при получении
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+              <h2 class="profile__subtitle">
+                Где нас нашли
+              </h2>
+              <ul class="profile__select-list">
+                <li class="profile__select-item profile__select-item_active">
+                  <p class="profile__txt">
+                    Яндекс поиск
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Google поиск
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    2GIS
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Яндекс карты
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Instagram
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Рекомендация
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Обращался ранее
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+                <li class="profile__select-item">
+                  <p class="profile__txt">
+                    Другое
+                  </p>
+                  <div class="profile__select-circle">
+                    <span class="profile__select-mark"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="profile__box">
+          <h2 class="profile__subtitle">
+            История заказов
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__top">
+      <div class="footer__map">
+        <iframe class="footer__map-iframe"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3a9aa094a34b7bd0b683da942219ffb040a9a5ad423ece2a93b25cd38cd0751cc2&amp;source=constructor">
+        </iframe>
+      </div>
+      <div class="footer__adresses">
+        <div class="footer__big-cell">
+          <p class="footer__big-cell-txt footer__big-cell-txt-bold">
+            Gentle Flowers
+          </p>
+          <p class="footer__big-cell-txt">
+            Санкт-Петербург, улица Автовская, дом 14, вход со двора
+          </p>
+          <img src="./img/geomark-red-icon.svg" alt="Геометка" class="footer__big-cell-icon">
+        </div>
+        <div class="footer__big-cell">
+          <p class="footer__big-cell-txt footer__big-cell-txt-bold">
+            Gentle Flowers
+          </p>
+          <p class="footer__big-cell-txt">
+            Санкт-Петербург, улица Автовская, дом 14, вход со двора
+          </p>
+          <img src="./img/geomark-red-icon.svg" alt="Геометка" class="footer__big-cell-icon">
+        </div>
+        <div class="footer__big-cell">
+          <p class="footer__big-cell-txt footer__big-cell-txt-bold">
+            Gentle Flowers
+          </p>
+          <p class="footer__big-cell-txt">
+            Санкт-Петербург, улица Автовская, дом 14, вход со двора
+          </p>
+          <img src="./img/geomark-red-icon.svg" alt="Геометка" class="footer__big-cell-icon">
+        </div>
+      </div>
+      <div class="footer__info">
+        <div class="footer__row">
+          <div class="footer__cell">
+            <img src="./img/phone-red-icon.svg" alt="Телефон" class="footer__icon">
+            <p class="footer__cell-txt">
+              +7 (921) 908-00-70
+            </p>
+          </div>
+          <a href="tel:+7 (921) 908-00-70" class="footer__cell-link button">позвонить</a>
+        </div>
+        <div class="footer__row">
+          <div class="footer__cell">
+            <img src="./img/mail-red-icon.svg" alt="Почта" class="footer__icon">
+            <p class="footer__cell-txt">
+              example@mail.ru
+            </p>
+          </div>
+          <a href="#" class="footer__cell-link button">написать</a>
+        </div>
+        <a href="./index.html" class="footer__logo-container">
+          <img src="./img/logo.png" alt="Логотип Gentle Flowers" class="footer__logo">
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="./index.html" class="footer__link">главная</a>
+          </li>
+          <li class="footer__item">
+            <a href="./catalog.html" class="footer__link">каталог</a>
+          </li>
+          <li class="footer__item">
+            <a href="./delivery.html" class="footer__link">доставка</a>
+          </li>
+          <li class="footer__item">
+            <a href="./contacts.html" class="footer__link">контакты</a>
+          </li>
+          <li class="footer__item">
+            <a href="./profile.html" class="footer__link">личный кабинет</a>
+          </li>
+          <li class="footer__item">
+            <a href="./cart.html" class="footer__link">корзина</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" class="footer__social footer__social_whatsapp"></a>
+        <a href="#" class="footer__social footer__social_telegram"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div class="popup">
+  <div class="popup__wrapper">
+    <form class="popup__form">
+      <h2 class="popup__title">
+        Закажите обратный звонок:
+      </h2>
+      <a href="#" class="popup__mail">info@mail.ru</a>
+      <fieldset class="popup__fieldset">
+        <div class="popup__input-row">
+          <img src="./img/profile-icon.svg" alt="Иконка пользователя" class="popup__input-icon">
+          <input type="text" class="popup__input" placeholder="Фамилия Имя Отчество">
+        </div>
+        <div class="popup__input-row">
+          <img src="./img/phone-icon.svg" alt="Иконка пользователя" class="popup__input-icon">
+          <input type="tel" class="popup__input" placeholder="+7 (999) 999-99-99">
+        </div>
+      </fieldset>
+      <div class="popup__container">
+        <button type="submit" class="popup__submit button">отправить</button>
+        <a href="#" class="popup__link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="popup__icon" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_163_708)">
+              <path
+                d="M17.496 14.3827C17.1952 14.2305 15.7305 13.5157 15.4567 13.4137C15.183 13.3162 14.9842 13.2652 14.7847 13.566C14.5897 13.8592 14.0152 14.5305 13.8397 14.7262C13.6642 14.922 13.4917 14.937 13.1955 14.8043C12.8947 14.652 11.934 14.3392 10.7933 13.3162C9.90225 12.5235 9.309 11.547 9.13275 11.2463C8.95725 10.9493 9.11325 10.7812 9.26175 10.6327C9.39825 10.4963 9.5625 10.2893 9.71475 10.1093C9.8595 9.92925 9.906 9.8085 10.0118 9.6135C10.1093 9.40275 10.059 9.2385 9.98475 9.09C9.9105 8.9415 9.31275 7.46925 9.063 6.88275C8.8245 6.30075 8.57475 6.375 8.391 6.375C8.21925 6.35925 8.01975 6.35925 7.821 6.35925C7.62225 6.35925 7.2975 6.4335 7.02375 6.7185C6.75 7.01925 5.97675 7.73775 5.97675 9.19125C5.97675 10.6485 7.047 12.0585 7.1955 12.2692C7.34775 12.4642 9.30075 15.4642 12.297 16.7535C13.0118 17.0542 13.5667 17.2342 14.0002 17.3827C14.715 17.6092 15.3675 17.5777 15.8827 17.5035C16.4527 17.4097 17.6483 16.7805 17.8988 16.0778C18.153 15.3705 18.153 14.7847 18.0788 14.652C18.0045 14.5155 17.8095 14.4412 17.5087 14.3085L17.496 14.3827ZM12.0623 21.75H12.0465C10.2727 21.75 8.51925 21.2692 6.98775 20.3708L6.6285 20.1562L2.8785 21.1327L3.8865 17.484L3.64425 17.109C2.65575 15.5347 2.1285 13.7183 2.1285 11.8515C2.1285 6.4065 6.58575 1.965 12.0697 1.965C14.7263 1.965 17.2185 3 19.0935 4.875C20.9685 6.73425 22.0035 9.2265 22.0035 11.8673C21.996 17.3085 17.5425 21.75 12.066 21.75H12.0623ZM20.5192 3.44925C18.2377 1.24575 15.2378 0 12.0465 0C5.4645 0 0.105 5.33625 0.10125 11.8942C0.10125 13.9882 0.648 16.0312 1.695 17.8395L0 24L6.336 22.3478C8.082 23.289 10.047 23.793 12.0472 23.7967H12.051C18.6368 23.7967 23.9963 18.4605 24 11.898C24 8.7225 22.7618 5.73375 20.5042 3.4875L20.5192 3.44925Z"
+                fill="black" />
+            </g>
+            <defs>
+              <clipPath id="clip0_163_708">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="#" class="popup__link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="popup__icon" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_163_710)">
+              <path
+                d="M12 0.375C5.57775 0.375 0.375 5.5785 0.375 12C0.375 18.4215 5.5785 23.625 12 23.625C18.4222 23.625 23.625 18.4215 23.625 12C23.625 5.5785 18.4215 0.375 12 0.375ZM17.7098 8.33925L15.8018 17.3302C15.6608 17.9678 15.2812 18.1222 14.7518 17.8223L11.8455 15.6803L10.4438 17.0303C10.2893 17.1847 10.158 17.316 9.858 17.316L10.0642 14.358L15.45 9.492C15.6848 9.28575 15.3982 9.16875 15.0885 9.375L8.43225 13.5653L5.5635 12.6698C4.94025 12.4732 4.926 12.0465 5.69475 11.7465L16.9028 7.42425C17.4233 7.23675 17.8778 7.551 17.709 8.3385L17.7098 8.33925Z"
+                fill="black" />
+            </g>
+            <defs>
+              <clipPath id="clip0_163_710">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    </form>
+    <button type="button" class="popup__close"></button>
+  </div>
+</div>
+  <script src="js/libs.min.js"></script>
+<script src="js/main.min.js" type="module" defer></script>
+</body>
+
+</html>
