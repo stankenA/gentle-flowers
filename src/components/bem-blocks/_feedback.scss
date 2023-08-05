@@ -2,12 +2,13 @@
   margin-bottom: 60px;
 
   @media screen and (max-width: 767px) {
-    display: none;
+    margin-bottom: 80px;
   }
 
   &__wrapper {
     width: var(--content-width);
     margin: 0 auto;
+    position: relative;
   }
 
   &__top {
@@ -23,6 +24,10 @@
     font-weight: 400;
     line-height: normal;
     margin: 0;
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+    }
   }
 
   &__service-list {
@@ -35,6 +40,13 @@
     display: flex;
     position: relative;
     gap: 20px;
+
+    @media screen and (max-width: 767px) {
+      height: 33px;
+      padding-left: 4px;
+      padding-right: 4px;
+      gap: 14px;
+    }
   }
 
   &__service-item {
@@ -64,6 +76,10 @@
     @include transition;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 767px) {
+      width: 49px;
+    }
   }
 
   &__bg {
@@ -77,12 +93,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include transition;
+
+    @media screen and (max-width: 767px) {
+      height: 35px;
+    }
   }
 
   &__nav {
     display: flex;
     align-items: center;
     gap: 28px;
+
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      bottom: -32px;
+      right: 0;
+    }
   }
 
   &__nav-btn {
@@ -101,6 +127,10 @@
     @include reset-list;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__card {
@@ -112,6 +142,10 @@
     padding: 20px 18px 18px 20px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__card-top {
